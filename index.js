@@ -2,18 +2,15 @@ const request = require('request-promise');
 const express = require('express')
 const app = express()
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-	port = 3000;
-}
-app.listen( port );
-
 var path = require('path');
 var public = path.join(__dirname, 'public');
 
 app.get('/api', async (req, res) => res.send(await requestVin(req.query.vin)))
 app.use('/', express.static(public));
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+
+const listener = app.listen(process.env.PORT || 8000, function() {
+	console.log('Your app is listening on port ' + listener.address().port);
+});
 
 let options = {
     json: true
