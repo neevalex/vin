@@ -1,7 +1,12 @@
 const request = require('request-promise');
 const express = require('express')
 const app = express()
-const port = 3000
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+	port = 3000;
+}
+app.listen( port );
 
 var path = require('path');
 var public = path.join(__dirname, 'public');
