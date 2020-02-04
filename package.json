@@ -1,0 +1,29 @@
+{
+  "name": "vin",
+  "version": "1.0.0",
+  "description": "AUTO VIN Checkout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neevalex/vin.git"
+  },
+  "keywords": [
+    "VIN",
+    "CAR"
+  ],
+  "author": "NeevAlex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neevalex/vin/issues"
+  },
+  "homepage": "https://github.com/neevalex/vin#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
+  }
+}
