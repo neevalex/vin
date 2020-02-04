@@ -272,7 +272,7 @@ textarea {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 1s ease;
-  min-width: 350px;
+  width: 70%;
 }
 
 .vin-container.loaded {
@@ -280,23 +280,32 @@ textarea {
 }
 
 .vin {
-  min-width: 350px;
-  padding: 5px;
+  width: 100%;
+  padding: 8px;
   outline:none;
   text-align: center;
   text-transform: uppercase;
   border: 1px solid #ccc;
+  position: relative;
 }
 .vin-container a {
-  float: right;
-  height: 30px;
-  width: 30px;
-  margin-left: 10px;
+ 
 }
 .vin-container a img {
-max-height: 26px;
-
+  max-height: 30px;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 1px;
+  right: -15px;
 }
+
+.vin-container > img {
+  display: block;
+  max-height: 45px;
+  margin: auto;
+  margin-bottom: 15px;
+  }
 
 .vin::-webkit-input-placeholder { /* WebKit browsers */
   text-transform: none;
